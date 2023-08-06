@@ -1,9 +1,21 @@
 {
-  "extends": ["next","next/core-web-vitals", "eslint:recommended"],
+  "extends": [
+    "next",
+    "next/core-web-vitals",
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:react/jsx-runtime"
+  ],
   "globals": {
     "React":"readonly"
   },
   "rules": {
-    "no-unused-vars":"warn"
+    "no-unused-vars":"warn",
+    "comma-spacing":"warn",
+    "object-property-newline":"warn",
+    "sort-keys":"warn",
+    "sort-vars":"warn",
+    "no-multiple-empty-lines":"warn",
+    "react/jsx-first-prop-new-line": "multiline"
   }
 }
