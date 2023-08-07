@@ -9,9 +9,7 @@ function Cube(){
   const meshRef = useRef<Mesh>(null)
   
   useFrame(() => {
-  if(!meshRef.current)  {
-    return
-  }
+  if(!meshRef.current) return
 
     meshRef.current.rotation.x += 0.01
     meshRef.current.rotation.y +=0.01

@@ -1,29 +1,25 @@
 
 'use client'
 
-import React, { useReducer, createContext } from 'react'
-import { LANGUAGE_TYPE_SLUG } from '../constants/contants' 
-import { getLocalData } from '../utils/static-data'
-
-export const LanguageContext = createContext({})
+import React, { useReducer, createContext, useState } from 'react'
+import { LANGUAGE_TYPE_SLUG, data } from '../constants/contants' 
 
 const reducer = (state:any, action:any) => {
-  if(!action.type) {
-    return state[LANGUAGE_TYPE_SLUG.EN]
+  if(state.type == LANGUAGE_TYPE_SLUG.EN) {
+    return data[LANGUAGE_TYPE_SLUG.PT]
   }
-  return state[action.type]
+  return data[LANGUAGE_TYPE_SLUG.EN]
 }
+
+export const LanguageContext = createContext({language:data[LANGUAGE_TYPE_SLUG.EN], dispatch:reducer})
 
 const LanguageProvider = ({
   children,
-  localData
 }: {
   children: React.ReactNode,
-  localData:any
 }) => {
-  
 
-  const [language, dispatch] = useReducer(reducer, localData)
+  const [language, dispatch] = useReducer(reducer, data[LANGUAGE_TYPE_SLUG.EN])
 
   return (
     <LanguageContext.Provider value={{language, dispatch }}>
@@ -32,11 +28,5 @@ const LanguageProvider = ({
   );
 }
 
-export async function getStaticProps(){
-  const localData = await getLocalData()
-  return {
-    props: { localData }
-  }
-}
 
 export default LanguageProvider
