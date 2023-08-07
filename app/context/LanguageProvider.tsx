@@ -1,10 +1,10 @@
 
 'use client'
 
-import React, { useReducer, createContext, useState } from 'react'
+import React, { useReducer, createContext } from 'react'
 import { LANGUAGE_TYPE_SLUG, data } from '../constants/contants' 
 
-const reducer = (state:any, action:any) => {
+const reducer = (state:any) => {
   if(state.type == LANGUAGE_TYPE_SLUG.EN) {
     return data[LANGUAGE_TYPE_SLUG.PT]
   }

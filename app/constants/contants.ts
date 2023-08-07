@@ -9,10 +9,44 @@ export const LANGUAGE_TYPE_SLUG:LanguageTypes = {
 export const data:any = {
   "EN":{
     type: 'EN',
-    header: ['Home','Projects', 'Info', 'Hire me']
+    header: [
+      {
+        title:'Home',
+        path: '/'
+      },
+      {
+        title:'Projects',
+        path:'/projects'
+      },
+      {
+        title:'Info',
+        path: '/info'
+      },
+      {
+        title:'Hire me',
+        path: '/contact'
+      }
+    ]
   },
   "PT":{
     type: 'PT',
-    header: ['Home','Projetos', 'Informações', 'Me contrate']
+    header: [
+      {
+        title:'Home',
+        path: '/'
+      },
+      {
+        title:'Projetos',
+        path:'/projects'
+      },
+      {
+        title:'Informações',
+        path: '/info'
+      },
+      {
+        title:'Contrate me',
+        path: '/contact'
+      }
+    ]
   }
 }

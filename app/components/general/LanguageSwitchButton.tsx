@@ -10,9 +10,9 @@ const LanguageSwitchButton = () => {
   const changeLanguage = () => {
     
     if(language.type == LANGUAGE_TYPE_SLUG.EN) {
-      dispatch(language, {type:LANGUAGE_TYPE_SLUG.PT})
+      dispatch(language)
     } else {
-      dispatch(language, {type:LANGUAGE_TYPE_SLUG.EN})      
+      dispatch(language)      
     }
     
   }
