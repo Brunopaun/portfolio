@@ -1,4 +1,7 @@
 import './styles/globals.css'
+import NavigationBar from './components/general/NavigationBar'
+import LanguageProvider from './context/LanguageProvider'
+import Footer from './components/general/Footer'
 
 export default function RootLayout({
   children,
@@ -8,7 +11,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        {children}
+        <LanguageProvider>
+          <NavigationBar/>
+            {children}
+          <Footer/>
+        </LanguageProvider>
       </body>
     </html>
   )
