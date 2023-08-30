@@ -1,40 +1,21 @@
 'use client'
 
-import { Canvas, useFrame } from '@react-three/fiber'
-import { useRef } from 'react'
-import  { Mesh } from 'three'
+import { Canvas, useLoader } from '@react-three/fiber'
+import { Suspense, useRef } from 'react'
+import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 
-
-function Cube(){
-  const meshRef = useRef<Mesh>(null)
-  
-  useFrame(() => {
-  if(!meshRef.current) return
-
-    meshRef.current.rotation.x += 0.01
-    meshRef.current.rotation.y +=0.01
-
-  })
-
-  return (
-    <mesh
-      ref={meshRef}
-    >
-      <boxGeometry/>
-      <meshStandardMaterial color="blue"/>
-    </mesh> 
-  )
+function Model(){
+  const result = useLoader(GLTFLoader, './models/snow.glb')
+ 
+  return <primitive object={result.scene} position={[0,1,0]} dispose={null}/>
 }
-
-
-
 
 export default function ReactThreeFiberComponent() {
   return (
     <Canvas>
-      <ambientLight />
-      <pointLight position={[10, 10, 10]}/>
-      <Cube/>
-    </Canvas>
+      <Suspense fallback={null}>
+        <Model />
+      </Suspense>
+    </Canvas> 
   )
 }

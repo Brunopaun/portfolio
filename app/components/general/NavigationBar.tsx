@@ -1,7 +1,7 @@
 'use client'
 
-import { useContext } from "react";
-import LanguageSwitchButton from "./LanguageSwitchButton";
+import { useContext } from "react"
+import LanguageSwitchButton from "./LanguageSwitchButton"
 import { LanguageContext } from "@/app/context/LanguageProvider";
 import style from '@/app/styles/header/header.module.css'
 import { ImGithub, ImLinkedin }from 'react-icons/im'
@@ -15,6 +15,10 @@ const NavigationBar = () => {
   
   return (
     <div className="flex justify-between px-24 pt-6">
+      <div className="flex flex-col w-11 text-justify">
+        <span>Bruno</span>
+        <span className="w-full text-justify">Aun</span>
+      </div>
       <ul className="flex space-x-2 text-base">
         {language.header.map((item:any) => {
           const isActive = pathname == item.path ? 'font-bold' : ''

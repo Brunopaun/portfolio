@@ -1,0 +1,22 @@
+
+.switch {
+  position:relative;
+}
+
+.switch .switch_left {
+    position: absolute;
+    width: 62px;
+    height: 29px;
+    left: 4px;
+    transition: all 0.3s ease;
+    box-shadow: 0px 0px 6px -2px #111;
+}
+
+.switch .switch_right {
+  position: absolute;
+  width: 62px;
+  height: 29px;
+  left: 62px;
+  transition: all 0.3s ease;
+  box-shadow: 0px 0px 6px -2px #111;
+}

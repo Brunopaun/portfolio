@@ -19,11 +19,11 @@ export const data:any = {
         path:'/projects'
       },
       {
-        title:'Info',
+        title:'About me',
         path: '/info'
       },
       {
-        title:'Hire me',
+        title:'Hire',
         path: '/contact'
       }
     ]
@@ -44,7 +44,7 @@ export const data:any = {
         path: '/info'
       },
       {
-        title:'Contrate me',
+        title:'Contrate-me',
         path: '/contact'
       }
     ]
