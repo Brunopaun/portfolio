@@ -7,6 +7,7 @@ import style from '@/app/styles/header/header.module.css'
 import { ImGithub, ImLinkedin }from 'react-icons/im'
 import { usePathname } from "next/navigation"
 import Link from "next/link"
+import { randomNumber } from 'so-toasted/lib/es6/index'
 
 const NavigationBar = () => {
   const pathname = usePathname()
@@ -24,7 +25,7 @@ const NavigationBar = () => {
           const isActive = pathname == item.path ? 'font-bold' : ''
 
           return (
-          <li className="hover:text-blue-4 cursor-pointer" key={`item-${item}-1`}>
+          <li className="hover:text-blue-4 cursor-pointer" key={`item-${randomNumber(1,100)}-1`}>
             <Link href={item.path} className={`${style.anchor} ${isActive}`}>
               {item.title}
             </Link>
