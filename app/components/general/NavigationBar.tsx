@@ -1,17 +1,17 @@
 'use client'
 
-import { useContext } from "react"
-import LanguageSwitchButton from "./LanguageSwitchButton"
-import { LanguageContext } from "@/app/context/LanguageProvider";
+import { useContext } from 'react'
+import LanguageSwitchButton from './LanguageSwitchButton'
+import { LanguageContext } from '@/app/context/LanguageProvider'
 import style from '@/app/styles/header/header.module.css'
 import { ImGithub, ImLinkedin }from 'react-icons/im'
-import { usePathname } from "next/navigation";
-import Link from "next/link";
+import { usePathname } from "next/navigation"
+import Link from "next/link"
 
 const NavigationBar = () => {
   const pathname = usePathname()
 
-  const {language} = useContext(LanguageContext)
+  const { language } = useContext(LanguageContext)
   
   return (
     <div className="flex justify-between px-24 pt-6">
@@ -24,7 +24,7 @@ const NavigationBar = () => {
           const isActive = pathname == item.path ? 'font-bold' : ''
 
           return (
-          <li className="hover:text-blue-4 cursor-pointer" key={`item-${item}`}>
+          <li className="hover:text-blue-4 cursor-pointer" key={`item-${item}-1`}>
             <Link href={item.path} className={`${style.anchor} ${isActive}`}>
               {item.title}
             </Link>

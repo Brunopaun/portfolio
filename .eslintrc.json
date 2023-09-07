@@ -16,6 +16,8 @@
     "sort-keys":"warn",
     "sort-vars":"warn",
     "no-multiple-empty-lines":"warn",
-    "react/jsx-first-prop-new-line": "multiline"
+    "react/jsx-first-prop-new-line": "multiline",
+    "quotes":["error", "single"],
+    "semi":["warn", "always"]
   }
 }
