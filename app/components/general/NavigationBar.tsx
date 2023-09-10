@@ -1,13 +1,13 @@
-'use client'
+"use client"
 
-import { useContext } from 'react'
-import LanguageSwitchButton from './LanguageSwitchButton'
-import { LanguageContext } from '@/app/context/LanguageProvider'
-import style from '@/app/styles/header/header.module.css'
-import { ImGithub, ImLinkedin }from 'react-icons/im'
+import { useContext } from "react"
+import LanguageSwitchButton from "./LanguageSwitchButton"
+import { LanguageContext } from "@/app/context/LanguageProvider"
+import style from "@/app/styles/header/header.module.css"
+import { ImGithub, ImLinkedin }from "react-icons/im"
 import { usePathname } from "next/navigation"
-import Link from "next/link"
-import { randomNumber } from 'so-toasted/lib/es6/index'
+import Link from 'next/link'
+import { randomNumber } from "so-toasted/lib/es6/index"
 
 const NavigationBar = () => {
   const pathname = usePathname()
@@ -15,18 +15,24 @@ const NavigationBar = () => {
   const { language } = useContext(LanguageContext)
   
   return (
+    <>
     <div className="flex justify-between px-24 pt-6">
-      <div className="flex flex-col w-11 text-justify">
-        <span>Bruno</span>
-        <span className="w-full text-justify">Aun</span>
+      <div className="flex flex-col items-center">
+        <img src="/bruno-aun-logo.svg" alt="logo" className="h-auto w-24"/>
       </div>
-      <ul className="flex space-x-2 text-base">
+      <ul className="flex space-x-2 text-base items-center">
         {language.header.map((item:any) => {
-          const isActive = pathname == item.path ? 'font-bold' : ''
+          const isActive = pathname == item.path ? "font-bold" : ""
 
           return (
-          <li className="hover:text-blue-4 cursor-pointer" key={`item-${randomNumber(1,100)}-1`}>
-            <Link href={item.path} className={`${style.anchor} ${isActive}`}>
+          <li 
+            className="hover:text-blue-4 cursor-pointer" 
+            key={`item-${randomNumber(1, 100)}-1`}
+          >
+            <Link 
+              href={item.path} 
+              className={`${style.anchor} ${isActive}`}
+            >
               {item.title}
             </Link>
           </li>
@@ -38,6 +44,7 @@ const NavigationBar = () => {
         <LanguageSwitchButton/>
       </div>
     </div>
+    </>
   )
 }
 

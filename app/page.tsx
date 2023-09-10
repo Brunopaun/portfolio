@@ -3,7 +3,7 @@ import ReactThreeFiberComponent from "./components/react-three-fiber/ReactThreeF
 export default function Home() {
   return (
     <main>
-      <ReactThreeFiberComponent/>
+      aa
     </main>
   )
 }

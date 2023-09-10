@@ -3,8 +3,6 @@
     "next",
     "next/core-web-vitals",
     "eslint:recommended",
-    "plugin:react/recommended",
-    "plugin:react/jsx-runtime"
   ],
   "globals": {
     "React":"readonly"
@@ -16,8 +14,7 @@
     "sort-keys":"warn",
     "sort-vars":"warn",
     "no-multiple-empty-lines":"warn",
-    "react/jsx-first-prop-new-line": "multiline",
-    "quotes":["error", "single"],
-    "semi":["warn", "always"]
+    "quotes":["warn", "double"],
+    "semi":["warn", "never"],
   }
 }
