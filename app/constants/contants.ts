@@ -12,7 +12,7 @@ export const data:any = {
     header: [
       {
         title:'Home',
-        path: '/'
+        path: '/home'
       },
       {
         title:'Projects',
@@ -26,7 +26,10 @@ export const data:any = {
         title:'Hire',
         path: '/contact'
       }
-    ]
+    ],
+    home: {
+      hero: 'Hey! We love good work. We work just right.'
+    }
   },
   "PT":{
     type: 'PT',
@@ -47,6 +50,9 @@ export const data:any = {
         title:'Contrate-me',
         path: '/contact'
       }
-    ]
+    ],
+    home: {
+      hero: 'Ei! A gente curte um trabalho bem feito. Nós fazemos direito.'
+    }
   }
 }

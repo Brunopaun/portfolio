@@ -10,7 +10,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>
+      <body className='h-screen max-h-screen overflow-y-hidden px-36 flex flex-col justify-between py-6'>
         <LanguageProvider>
           <NavigationBar/>
             {children}

@@ -16,6 +16,11 @@ module.exports = {
       'blue-4': '#C0D6DF',
       'platinum-2': '#EAEAEA'
     },
+    extend:{
+      margin:{
+        '120':'120px'
+      }
+    }
   },
   plugins: [],
 }

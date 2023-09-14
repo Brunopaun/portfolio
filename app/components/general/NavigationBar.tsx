@@ -16,17 +16,17 @@ const NavigationBar = () => {
   
   return (
     <>
-    <div className="flex justify-between px-24 pt-6">
+    <div className="flex justify-between">
       <div className="flex flex-col items-center">
         <img src="/bruno-aun-logo.svg" alt="logo" className="h-auto w-24"/>
       </div>
-      <ul className="flex space-x-2 text-base items-center">
+      <ul className="flex space-x-2 text-base items-center mr-auto ml-10">
         {language.header.map((item:any) => {
           const isActive = pathname == item.path ? "font-bold" : ""
 
           return (
           <li 
-            className="hover:text-blue-4 cursor-pointer" 
+            className="hover:text-blue-4 cursor-pointer w-56  " 
             key={`item-${randomNumber(1, 100)}-1`}
           >
             <Link 
