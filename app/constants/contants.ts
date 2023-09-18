@@ -15,8 +15,8 @@ export const data:any = {
         path: '/home'
       },
       {
-        title:'Projects',
-        path:'/projects'
+        title:'Portfolio',
+        path:'/portfolio'
       },
       {
         title:'About me',
@@ -36,11 +36,11 @@ export const data:any = {
     header: [
       {
         title:'Home',
-        path: '/'
+        path: '/home'
       },
       {
-        title:'Projetos',
-        path:'/projects'
+        title:'Portfólio',
+        path:'/portfolio'
       },
       {
         title:'Informações',

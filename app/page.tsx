@@ -1,9 +1,5 @@
-import ReactThreeFiberComponent from "./components/react-three-fiber/ReactThreeFiber"
+import { redirect } from "next/navigation"
 
 export default function Home() {
-  return (
-    <main>
-      aa
-    </main>
-  )
+  redirect('/home')
 }

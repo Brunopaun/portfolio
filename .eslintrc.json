@@ -16,5 +16,6 @@
     "no-multiple-empty-lines":"warn",
     "quotes":["warn", "double"],
     "semi":["warn", "never"],
+    "indent":["error", 1]
   }
 }
