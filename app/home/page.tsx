@@ -9,7 +9,7 @@ const page = () => {
   
   
   return (
-    <div className="flex items-center">
+    <div className="flex items-center h-full" id="home">
       <h1 className="text-9xl font-medium indent-36 mr-120">{language.home.hero}</h1>
     </div>
   );

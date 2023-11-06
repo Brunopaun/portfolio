@@ -1,11 +1,6 @@
 import style from '@/app/styles/portfolio/portfolio.module.css'
 
-
-
 const Portfolio = () => {
-
-
-
 
   return (
     <div className="w-full h-full pt-36">

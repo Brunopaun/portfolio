@@ -8,14 +8,28 @@ html,
 body,
 #root {
   width: 100%;
-  height: auto;
+  height: 100%;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: #EAEAEA;
   font-family: Arial, Helvetica, 'HelveticaNeue', sans-serif;
   font-size: 14px;
   line-height: 20px;
+  background-color:hsla(187,0%,39%,1);
+  background-image:
+  radial-gradient(at 39% 46%, hsla(62,0%,99%,1) 0px, transparent 50%),
+  radial-gradient(at 68% 89%, hsla(340,0%,95%,1) 0px, transparent 50%),
+  radial-gradient(at 51% 37%, hsla(199,32%,81%,1) 0px, transparent 50%),
+  radial-gradient(at 65% 92%, hsla(239,72%,71%,1) 0px, transparent 50%),
+  radial-gradient(at 82% 27%, hsla(347,0%,98%,1) 0px, transparent 50%),
+  radial-gradient(at 26% 89%, hsla(134,0%,95%,1) 0px, transparent 50%),
+  radial-gradient(at 4% 4%, hsla(62,0%,91%,1) 0px, transparent 50%),
+  url('/noise.svg'),
+  radial-gradient(
+    at var(--mouse-x) var(--mouse-y),
+      rgba(255,255,255,1),
+      rgba(0,0,0,1)
+    );
 }
 
 i.symbol {
